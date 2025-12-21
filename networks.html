@@ -153,11 +153,11 @@ d3.json("labsData.json").then(function(rawData) {
     });
 
     const pieData = Object.entries(affiliationMap).map(([aff,labs]) => ({
-        affiliation: aff,
-        labs,
-        count: labs.length
-    }));
-
+    affiliation: aff,
+    labs,
+    count: labs.length
+})).sort((a, b) => b.count - a.count);  // Sort by count, highest first
+    
     const affiliations = pieData.map(d => d.affiliation);
     const colorScale = d3.scaleOrdinal()
         .domain(affiliations)
@@ -192,7 +192,9 @@ d3.json("labsData.json").then(function(rawData) {
         });
 
         const ul = d3.select("#affiliation-list").html("");
-        Object.entries(map).forEach(([n,ls])=>{
+Object.entries(map)
+    .sort((a, b) => a[0].localeCompare(b[0]))  // Sort network names alphabetically
+    .forEach(([n,ls])=>{
             const li = ul.append("li").attr("class","affiliation-item");
             li.append("strong").text(n).style("color","white");
             ls.forEach(l=>{
