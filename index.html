@@ -16,6 +16,17 @@
             font-family: 'Courier New', 'Lucida Console', Monaco, Monospace;
             background-color: #373b57;
         }
+
+        /* Ensure map container has proper height on all devices */
+        #visual-container {
+            min-height: 400px;
+        }
+
+        @media (min-width: 768px) {
+            #visual-container {
+                min-height: 600px;
+            }
+        }
     </style>
 </head>
 
@@ -71,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setTimeout(() => {
         map.invalidateSize();
-    }, 300);
+    }, 500);
 
     fetch("geocoded_iniciativas.json")
         .then(r => r.json())
