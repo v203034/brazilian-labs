@@ -22,12 +22,30 @@ body {
     flex-direction: row-reverse;
 }
 
+/* Networks-specific: Wider filter menu */
+@media (min-width: 768px) {
+    #filter-menu {
+        width: 300px;
+        flex: 0 0 300px;
+    }
+}
+
 /* Networks-specific: Pie chart container styling */
 #visual-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 15px;
+    max-width: 600px;
+}
+
+/* Make container square on desktop */
+@media (min-width: 768px) {
+    #visual-container {
+        height: 600px;
+        width: 600px;
+        max-width: 600px;
+    }
 }
 
 #visual-container h3 {
