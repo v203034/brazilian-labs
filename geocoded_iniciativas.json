@@ -1,0 +1,1206 @@
+[
+  {
+    "name": "EITCHA! (Escola Itinerante de Tecnologia Cidadã Hacker)",
+    "ciudad": "Porto Alegre",
+    "estado": "RS",
+    "lat": -30.0324999,
+    "lon": -51.2303767
+  },
+  {
+    "name": "0xe Hacker Club",
+    "ciudad": "Maceió",
+    "estado": "AL",
+    "lat": -9.6531308,
+    "lon": -35.7148628
+  },
+  {
+    "name": "ABA Fab Lab",
+    "ciudad": "Recife",
+    "estado": "PE",
+    "lat": -8.0381486,
+    "lon": -34.8997317
+  },
+  {
+    "name": "ABC Makerspace",
+    "ciudad": "São Bernardo do Campo",
+    "estado": "SP",
+    "lat": -23.7080345,
+    "lon": -46.5506747
+  },
+  {
+    "name": "ANDROIDES ANDRÓGINOS",
+    "ciudad": "Itinerante",
+    "estado": "PA",
+    "lat": -1.4152568,
+    "lon": -48.4596483
+  }, 
+  {
+    "name": "Anima Lab - São Judas Unimonte",
+    "ciudad": "Santos",
+    "estado": "SP",
+    "lat": -23.9438503,
+    "lon": -46.3277690
+  },
+  {
+    "name": "Anima Lab UniBH",
+    "ciudad": "Belo Horizonte",
+    "estado": "MG", 
+    "lat": -19.9713419,
+    "lon": -43.9646530
+  },
+  {
+    "name": "APT Data Dungeon",
+    "ciudad": "João Pessoa",
+    "estado": "PB",
+    "lat": -7.1215981,
+    "lon": -34.882028
+  },
+  {
+    "name": "Área 31",
+    "ciudad": "Belo Horizonte",
+    "estado": "MG", 
+    "lat": -19.943509,
+    "lon": -43.92465
+  },
+  {
+    "name": "ATADOS – RJ",
+    "ciudad": "Rio de Janeiro",
+    "estado": "RJ",
+    "lat": -22.9388309,
+    "lon": -43.2477162
+  },
+    {
+    "name": "ATADOS - SP",
+    "ciudad": "São Paulo",
+    "estado": "SP",
+    "lat": -23.5662748,
+    "lon": -46.6848176
+  },
+  {
+    "name": "Baia Hacker",
+    "ciudad": "Itu",
+    "estado": "SP",
+    "lat": -23.256099,
+    "lon": -47.3056698
+  },
+  {
+    "name": "Base 12",
+    "ciudad": "Sorocaba",
+    "estado": "SP",
+    "lat": -23.515435,
+    "lon": -47.443944
+  },
+  {
+    "name": "BeeLab (Laboratório de Fabricação Digital do Parque Tecnológico Jataí)",
+    "ciudad": "Jataí",
+    "estado": "GO",
+    "lat": -17.8856178,
+    "lon": -51.7202967
+  },
+  {
+    "name": "Calango Hacker Clube",
+    "ciudad": "Brasília",
+    "estado": "DF",
+    "lat": -15.7730236,
+    "lon": -47.876045
+  },
+  {
+    "name": "CASA COLETIVA",
+    "ciudad": "Rio de Janeiro",
+    "estado": "RJ",
+    "lat": -22.9783136,
+    "lon": -43.2329498
+  },
+  {
+    "name": "CENTRO AFRO CARIOCA DE CINEMA",
+    "ciudad": "Rio de Janeiro",
+    "estado": "RJ", 
+    "lat": -22.9158384,
+    "lon": -43.1782429
+  },
+  {
+    "name": "Centro de Tecnologia Acadêmica do Instituto de Física (CTA IF)",
+    "ciudad": "Porto Alegre",
+    "estado": "RS",
+    "lat": -30.072859,
+    "lon": -51.119320
+  },
+  {
+    "name": "Chapéu de Palha Hacker Club",
+    "ciudad": "Araraquara",
+    "estado": "SP",
+    "lat": -21.7764316,
+    "lon": -48.1759520
+  },
+  {
+    "name": "CIDADE DEMOCRÁTICA",
+    "ciudad": "São Paulo",
+    "estado": "SP",
+    "lat": -23.67379,
+    "lon": -46.65681
+  },
+  {
+    "name": "Centro de Integração Tecnológico (CITec)",
+    "ciudad": "Rio Grande",
+    "estado": "RS",
+    "lat": -32.0334252,
+    "lon": -52.0991297
+  },
+  {
+    "name": "CTC DIGITAL",
+    "ciudad": "São Paulo",
+    "estado": "SP",
+    "lat": -23.5581817,
+    "lon": -46.6615383
+  },
+  {
+    "name": "Curitiba Fab Lab",
+    "ciudad": "Curitiba",
+    "estado": "PR",
+    "lat": -25.4411964,
+    "lon": -49.2201340
+  },
+  {
+    "name": "ECOMUSEU DE MANGUINHOS",
+    "ciudad": "Rio de Janeiro",
+    "estado": "RJ", 
+    "lat": -22.8790236,
+    "lon": -43.2531202
+  },
+  {
+    "name": "Empresa Júnior Antônio Paes de Carvalho (APC) BIOTECNOLOGIA",
+    "ciudad": "Rio de Janeiro",
+    "estado": "RJ",  
+    "lat": -22.8410033,
+    "lon": -43.2347969
+  },
+  {
+    "name": "ENACTUS UFRJ",
+    "ciudad": "Rio de Janeiro",
+    "estado": "RJ",  
+    "lat": -23.5605983,
+    "lon": -46.6578138
+  },
+  {
+    "name": "FAB LAB ARARAS",
+    "ciudad": "Araras",
+    "estado": "SP",
+    "lat": -22.3569192,
+    "lon": -47.3838766
+  },
+  {
+    "name": "Fab Lab Casa Firjan",
+    "ciudad": "Rio de Janeiro",
+    "estado": "RJ", 
+    "lat": -22.9498370,
+    "lon": -43.1890502
+  },
+  {
+    "name": "FAB LAB CENTRO CULTURAL DA PENHA",
+    "ciudad": "São Paulo",
+    "estado": "SP",
+    "lat": -23.5256740,
+    "lon": -46.5484456
+  },
+  {
+    "name": "FAB LAB CITEB",
+    "ciudad": "Bauru",
+    "estado": "SP",
+    "lat": -22.3218102,
+    "lon": -49.0705863
+  },
+  {
+    "name": "Fab Lab da Firjan SENAI - Benfica",
+    "ciudad": "Rio de Janeiro",
+    "estado": "RJ", 
+    "lat": -22.8958823, 
+    "lon": -43.2409616
+  },
+  {
+    "name": "Fab Lab da Firjan SENAI - Campos",
+    "ciudad": "Rio de Janeiro",
+    "estado": "RJ", 
+    "lat": -21.7529318,
+    "lon": -41.3379358
+  },
+    {
+    "name": "Fab Lab da Firjan SENAI - Itaguaí",
+    "ciudad": "Itaguaí",
+    "estado": "RJ",
+    "lat": -22.8644678,
+    "lon": -43.7499984
+  },
+   {
+    "name": "Fab Lab da Firjan - Jacarepaguá",
+    "ciudad": "Rio de Janeiro",
+    "estado": "RJ",
+    "lat": -22.9531726,
+    "lon": -43.3715825
+  },
+    {
+    "name": "FabLab da Firjan SENAI - Nova Friburgo",
+    "ciudad": "Nova Friburgo",
+    "estado": "RJ",
+    "lat": -22.2844458,
+    "lon": -42.5330383
+  },  
+  {
+    "name": "Fab Lab da Firjan SENAI - Petrópolis",
+    "ciudad": "Petrópolis",
+    "estado": "RJ",
+    "lat": -22.5040677,
+    "lon": -43.1708967
+  },
+    {
+    "name": "Fab Lab da Firjan - Resende",
+    "ciudad": "Resende",
+    "estado": "RJ",
+    "lat": -22.4633804,
+    "lon": -44.4575182
+  },
+  {
+    "name": "Fab Lab da Firjan SENAI - Três Rios",
+    "ciudad": "Três Rios",
+    "estado": "RJ",
+    "lat": -22.1223298,
+    "lon": -43.2101525
+  },
+  {
+    "name": "Fab Lab da Indústria - SESI/SENAI/IEL CIC",
+    "ciudad": "Curitiba",
+    "estado": "PR",
+    "lat": -25.4967208,
+    "lon": -49.3105972
+  },
+  {
+    "name": "Fab lab da Indústria - SESI SENAI IEL SJP",
+    "ciudad": "São José dos Pinhais",
+    "estado": "PR",
+    "lat": -25.533816,
+    "lon": -49.2072163
+  },
+  {
+    "name": "FAB LAB ENIAC",
+    "ciudad": "Guarulhos",
+    "estado": "SP",
+    "lat": -23.4675941,
+    "lon": -46.5277704
+  },
+  {
+    "name": "FAB LAB Escola SESI - Araraquara",
+    "ciudad": "Araraquara",
+    "estado": "SP",
+    "lat": -21.7771539,
+    "lon": -48.1561021
+  },
+  {
+    "name": "Fab Lab Escola SESI - Araras",
+    "ciudad": "Araras",
+    "estado": "SP",
+    "lat": -22.3569192,
+    "lon": -47.3838766
+  },
+   {
+    "name": "Fab Lab Escola SESI - A.E. Carvalho",
+    "ciudad": "São Paulo",
+    "estado": "SP",
+    "lat": -23.5358632,
+    "lon": -46.4753919
+  },
+  {
+    "name": "Fab Lab Escola SESI - Bauru",
+    "ciudad": "Bauru",
+    "estado": "SP",
+    "lat": -22.3218102,
+    "lon": -49.0705863
+  },
+    {
+    "name": "Fab Lab Escola SESI - Birigui",
+    "ciudad": "Birigui",
+    "estado": "SP",
+    "lat": -21.2908491,
+    "lon": -50.34144
+  },
+  {
+    "name": "Fab Lab Escola SESI - Botucatu",
+    "ciudad": "Botucatu",
+    "estado": "SP",
+    "lat": -22.8879628,
+    "lon": -48.4410712
+  },
+  {
+    "name": "Fab Lab Escola SESI - Campinas",
+    "ciudad": "Campinas",
+    "estado": "SP",
+    "lat": -22.9149173,
+    "lon": -47.0688763
+  },
+  {
+    "name": "Fab Lab Escola SESI - Cotia",
+    "ciudad": "Cotia",
+    "estado": "SP",
+    "lat": -23.603889,
+    "lon": -46.918889
+  },
+  {
+    "name": "Fab Lab Escola SESI - Franca",
+    "ciudad": "Franca",
+    "estado": "SP",
+    "lat": -20.5381768,
+    "lon": -47.4009795
+  },
+   {
+    "name": "Fab Lab Escola SESI - Ipiranga",
+    "ciudad": "São Paulo",
+    "estado": "SP",
+    "lat": -23.5821085,
+    "lon": -46.6079645
+  },
+  {
+    "name": "Fab Lab Escola SESI - Itu",
+    "ciudad": "Itu",
+    "estado": "SP",
+    "lat": -23.2637798,
+    "lon": -47.2998462
+  },
+  {
+    "name": "Fab Lab Escola SESI - Jundiaí",
+    "ciudad": "Jundiaí",
+    "estado": "SP",
+    "lat": -23.1887668,
+    "lon": -46.884506
+  },
+  {
+    "name": "Fab Lab Escola SESI - Limeira",
+    "ciudad": "Limeira",
+    "estado": "SP",
+    "lat": -22.5615068,
+    "lon": -47.401766
+  },
+  {
+    "name": "Fab Lab Escola SESI - Marília",
+    "ciudad": "Marília",
+    "estado": "SP",
+    "lat": -22.2172002,
+    "lon": -49.9500061
+  },
+  {
+    "name": "Fab Lab Escola SESI - Mauá",
+    "ciudad": "Mauá",
+    "estado": "SP",
+    "lat": -23.6478509,
+    "lon": -46.5721473
+  },
+  {
+    "name": "Fab Lab Escola SESI - Mogi das Cruzes",
+    "ciudad": "Mogi das Cruzes",
+    "estado": "SP",
+    "lat": -23.5234284,
+    "lon": -46.1926671
+  },
+    {
+    "name": "Fab Lab Escola SESI - Mogi Guaçu",
+    "ciudad": "Mogi Guaçu",
+    "estado": "SP",
+    "lat": -22.372222,
+    "lon": -46.9425
+  },
+  {
+    "name": "Fab Lab Escola SESI - Osasco",
+    "ciudad": "Osasco",
+    "estado": "SP",
+    "lat": -23.5324859,
+    "lon": -46.7916801
+  },
+  {
+    "name": "Fab Lab Escola SESI - Ourinhos",
+    "ciudad": "Ourinhos",
+    "estado": "SP",
+    "lat": -22.9777918,
+    "lon": -49.868204
+  },
+  {
+    "name": "Fab Lab Escola SESI - Presidente Prudente",
+    "ciudad": "Presidente Prudente",
+    "estado": "SP",
+    "lat": -22.1225167,
+    "lon": -51.3882528
+  },
+  {
+    "name": "Fab Lab Escola SESI - Ribeirão Preto",
+    "ciudad": "Ribeirão Preto",
+    "estado": "SP",
+    "lat": -21.1776315,
+    "lon": -47.8100983
+  },
+  {
+    "name": "Fab Lab Escola SESI - São Bernardo do Campo",
+    "ciudad": "São Bernardo do Campo",
+    "estado": "SP",
+    "lat": -23.7080345,
+    "lon": -46.5506747
+  },
+  {
+    "name": "Fab Lab Escola SESI - São José do Rio Preto",
+    "ciudad": "São José do Rio Preto",
+    "estado": "SP",
+    "lat": -20.8125851,
+    "lon": -49.3804212
+  },
+   {
+    "name": "Fab Lab Escola SESI - São José dos Campos",
+    "ciudad": "São José dos Campos",
+    "estado": "SP",
+    "lat": -23.1867782,
+    "lon": -45.8854538
+  },
+  {
+    "name": "Fab Lab Escola SESI - Sertãozinho",
+    "ciudad": "Sertãozinho",
+    "estado": "SP",
+    "lat": -21.1253403,
+    "lon": -48.0185691
+  },
+  {
+    "name": "Fab Lab Escola SESI - Suzano",
+    "ciudad": "Suzano",
+    "estado": "SP",
+    "lat": -23.5427842,
+    "lon": -46.3108391
+  },
+  {
+    "name": "Fab Lab Escola SESI - Tatuí",
+    "ciudad": "Tatuí",
+    "estado": "SP",
+    "lat": -23.3489848,
+    "lon": -47.8490165
+  },
+    {
+    "name": "Fab Lab Escola SESI - Taubaté",
+    "ciudad": "Taubaté",
+    "estado": "SP",
+    "lat": -23.031448,
+    "lon": -45.5612792
+  },
+  {
+    "name": "Fab Lab Escola SESI - Vila Leopoldina",
+    "ciudad": "São Paulo",
+    "estado": "SP",
+    "lat": -23.5275027,
+    "lon": -46.732947
+  },
+  {
+    "name": "Fab LAB Facens",
+    "ciudad": "Sorocaba",
+    "estado": "SP",
+    "lat": -23.4697164,
+    "lon": -47.430307
+  },
+  {
+    "name": "FAB LAB GAMT",
+    "ciudad": "Caçapava",
+    "estado": "SP",
+    "lat": -23.099204,
+    "lon": -45.707645
+  },
+  {
+    "name": "FAB LAB IEMA",
+    "ciudad": "São Luís",
+    "estado": "MA",
+    "lat": -2.5295265,
+    "lon": -44.2963942
+  },
+  {
+    "name": "Fab Lab Joinville",
+    "ciudad": "Joinville",
+    "estado": "SC",
+    "lat": -26.3011773,
+    "lon": -48.8510320
+  },
+  {
+    "name": "Fab Lab Leonardo da Vinci",
+    "ciudad": "Nova Lima",
+    "estado": "MG",
+    "lat": -19.9854089,
+    "lon": -43.8470691
+  },
+  {
+    "name": "FAB LAB LIVRE SP C.F.C. CIDADE TIRADENTES",
+    "ciudad": "São Paulo",
+    "estado": "SP",
+    "lat": -23.5824973,
+    "lon": -46.4092065
+  },
+  {
+    "name": "FAB LAB LIVRE SP CASA DA Memória Itaquera",
+    "ciudad": "São Paulo",
+    "estado": "SP",
+    "lat": -23.5360799,
+    "lon": -46.4555099
+  },
+  {
+    "name": "FAB LAB LIVRE SP CENTRO CULTURAL DA Juventude",
+    "ciudad": "São Paulo",
+    "estado": "SP",
+    "lat": -23.4758062,
+    "lon": -46.6704207
+  },
+  {
+    "name": "FAB LAB LIVRE SP CENTRO CULTURAL SP",
+    "ciudad": "São Paulo",
+    "estado": "SP",
+    "lat": -23.5697804,
+    "lon": -46.6399783
+  },
+  {
+    "name": "FAB LAB LIVRE SP CEU Anhanguera",
+    "ciudad": "São Paulo",
+    "estado": "SP",
+    "lat": -23.4398787,
+    "lon": -46.7879583
+  },
+  {
+    "name": "FAB LAB LIVRE SP CEU HELIÓPOLIS",
+    "ciudad": "São Paulo",
+    "estado": "SP",
+    "lat": -23.6209762,
+    "lon": -46.5901690
+  },
+  {
+    "name": "FAB LAB LIVRE SP CEU TRÊS PONTES",
+    "ciudad": "São Paulo",
+    "estado": "SP",
+    "lat": -23.4778998,
+    "lon": -46.3811632
+  },
+  {
+    "name": "FAB LAB LIVRE SP CHÁCARA DO JOCKEY",
+    "ciudad": "São Paulo",
+    "estado": "SP",
+    "lat": -23.5980311,
+    "lon": -46.7444819
+  },
+  {
+    "name": "FAB LAB LIVRE SP GALERIA OLIDO",
+    "ciudad": "São Paulo",
+    "estado": "SP",
+    "lat": -23.5432819,
+    "lon": -46.6390269
+  },
+  {
+    "name": "FAB LAB LIVRE SP SÃO Joaquim",
+    "ciudad": "São Paulo",
+    "estado": "SP",
+    "lat": -23.6868718,
+    "lon": -46.7495512
+  },
+  {
+    "name": "FAB LAB LIVRE SP VILA ITORORÓ",
+    "ciudad": "São Paulo",
+    "estado": "SP",
+    "lat": -23.671503,
+    "lon": -46.551978
+  },
+  {
+    "name": "FAB LAB LIVRE SP VILA RUBI",
+    "ciudad": "São Paulo",
+    "estado": "SP",
+    "lat": -23.7277871,
+    "lon": -46.6971664
+  },
+  {
+    "name": "Fab Lab Manaus",
+    "ciudad": "Manaus",
+    "estado": "AM",
+    "lat": -3.1316333,
+    "lon": -59.9825041
+  },
+  {
+    "name": "Fab Lab Móvel Mauá",
+    "ciudad": "São Caetano do Sul",
+    "estado": "SP",
+    "lat": -23.6669527,
+    "lon": -46.4616922
+  },
+  {
+    "name": "Fab LAB Newton",
+    "ciudad": "Belo Horizonte",
+    "estado": "MG",
+    "lat": -19.9058902,
+    "lon": -43.9637778
+  },
+  {
+    "name": "FAB LAB ODONTO",
+    "ciudad": "São Paulo",
+    "estado": "SP", 
+    "lat": -23.5615332,
+    "lon": -46.6881167
+  },
+  {
+    "name": "Fab Lab Passo Fundo",
+    "ciudad": "Passo Fundo",
+    "estado": "RS",
+    "lat": -28.2540871,
+    "lon": -52.3959875
+  },
+  {
+    "name": "Fab Lab Recife",
+    "ciudad": "Recife",
+    "estado": "PE",
+    "lat": -8.064695,
+    "lon": -34.8729819
+  },
+  {
+    "name": "FAB LAB RIO",
+    "ciudad": "Rio de Janeiro",
+    "estado": "RJ",
+    "lat": -22.8843649,
+    "lon": -43.3123666
+  },
+  {
+    "name": "Fab Lab THE",
+    "ciudad": "Teresina",
+    "estado": "PI",
+    "lat": -5.0874608,
+    "lon": -42.8049571
+  },
+  {
+    "name": "Fab Lab Uniara",
+    "ciudad": "Araraquara",
+    "estado": "SP", 
+    "lat": -21.7969053,
+    "lon": -48.1780795
+  },
+  {
+    "name": "Fab Lab Unipam",
+    "ciudad": "Patos de Minas",
+    "estado": "MG",
+    "lat": -18.6041453,
+    "lon": -46.5096698
+  },
+  {
+    "name": "fab lab.au - UFMT",
+    "ciudad": "Cuiabá",
+    "estado": "MT",
+    "lat": -15.61059675,
+    "lon": -56.0649466
+  },
+  {
+    "name": "FabLAB amadomaker - UPF",
+    "ciudad": "Passo Fundo",
+    "estado": "RS",
+    "lat": -28.2325282,
+    "lon":  -52.3823618
+  },
+  {
+    "name": "FabLab Castanheiras",
+    "ciudad": "Santana de Parnaiba",
+    "estado": "SP",
+    "lat": -23.4446715,
+    "lon": -46.9167722
+  },
+  {
+    "name": "FabLab Cuiabá",
+    "ciudad": "Sorocaba",
+    "estado": "SP",
+    "lat": -23.4729203,
+    "lon": -47.4345933
+  },
+  {
+    "name": "FabLab Escola Concept RAO",
+    "ciudad": "Ribeirão Preto",
+    "estado": "SP",
+    "lat": -21.1776315,
+    "lon": -47.8100983
+  },
+  {
+    "name": "FabLab Escola Concept SP",
+    "ciudad": "São Paulo",
+    "estado": "SP",
+    "lat": -23.57955627,
+    "lon": -46.6781535
+  },
+  {
+    "name": "FabLab Escola Concept SSA",
+    "ciudad": "Salvador",
+    "estado": "BA",
+    "lat": -12.9822499,
+    "lon": -38.4812772
+  },
+  {
+    "name": "FabLab Escola SESI - Sorocaba",
+    "ciudad": "Sorocaba",
+    "estado": "SP",
+    "lat": -23.5076200,
+    "lon": -47.4694087
+  },
+  {
+    "name": "Fablab FHA",
+    "ciudad": "Ibirité",
+    "estado": "MG",
+    "lat": -20.0214251,
+    "lon": -44.0621506
+  },
+  {
+    "name": "Fablab Firjan CR Cinema e Audiovisual",
+    "ciudad": "Rio de Janeiro",
+    "estado": "RJ",
+    "lat": -22.9344511, 
+    "lon": -43.1818248
+  },
+  {
+    "name": "FabLab IFMaker",
+    "ciudad": "Palmas",
+    "estado": "TO",
+    "lat": -10.1985013,
+    "lon": -48.3125673
+  },
+  {
+    "name": "Fablab ITA",
+    "ciudad": "Itabuna",
+    "estado": "BA",
+    "lat": -14.793173,
+    "lon": -39.2750341
+  },
+  {
+    "name": "Fablab Jundiaí",
+    "ciudad": "Jundiaí",
+    "estado": "SP",
+    "lat": -23.1947417,
+    "lon": -46.8724229
+  },
+  {
+    "name": "FabLab Mauá",
+    "ciudad": "São Caetano do Sul",
+    "estado": "SP",
+    "lat": -23.6474862,
+    "lon": -46.5759686
+  },
+  {
+    "name": "FabLab Parque Tecnológico de Sorocaba (PTS)",
+    "ciudad": "Sorocaba",
+    "estado": "SP",
+    "lat": -23.4838406,
+    "lon": -47.4718847
+  },
+  {
+    "name": "FabLab SENAI-UEMS",
+    "ciudad": "Dourados",
+    "estado": "MS",
+    "lat": -22.2206145,
+    "lon": -54.812208
+  },
+  {
+    "name": "FabLab Sinergia",
+    "ciudad": "Navegantes",
+    "estado": "SC",
+    "lat": -26.8898813,
+    "lon": -48.6495828
+  },
+  {
+    "name": "Fablab UFPB",
+    "ciudad": "Joao Pessoa",
+    "estado": "PB",
+    "lat": -7.1373107,
+    "lon": -34.8473135
+  },
+  {
+    "name": "FABLAB UNIFAP (Garagemlab)",
+    "ciudad": "Juazeiro do Norte",
+    "estado": "CE",
+    "lat": -7.2153453,
+    "lon": -39.3153336
+  },
+  {
+    "name": "Fablab Unilasalle",
+    "ciudad": "Canoas",
+    "estado": "RS",
+    "lat": -29.9174,
+    "lon": -51.180005
+  },
+  {
+    "name": "FabLab Unisinos POA",
+    "ciudad": "Porto Alegre",
+    "estado": "RS",
+    "lat": -30.0313492,
+    "lon": -51.1753993
+  },
+  {
+    "name": "Fabulosa Lab",
+    "ciudad": "Rio de Janeiro",
+    "estado": "RJ",  
+    "lat": -22.9263176,
+    "lon": -43.1769010
+  },
+  {
+    "name": "Farol da Criatividade FabLab",
+    "ciudad": "São Leopoldo",
+    "estado": "RS",
+    "lat": -29.7544405,
+    "lon": -51.1516497
+  },
+  {
+    "name": "Firjan SENAI - Niterói",
+    "ciudad": "Niterói",
+    "estado": "RJ",
+    "lat": -22.8939556,
+    "lon": -43.1221153
+  },
+  {
+    "name": "FUNDAÇÃO PARQUE TECNOLÓGICO DE SANTOS",
+    "ciudad": "Santos",
+    "estado": "SP", 
+    "lat": -23.9404553,
+    "lon": -46.3233660
+  },
+  {
+    "name": "GAROA HACKER CLUBE",
+    "ciudad": "São Paulo",
+    "estado": "SP",
+    "lat": -23.5650091,
+    "lon": -46.6991431
+  },
+  {
+    "name": "GRUPO NÓS DO MORRO",
+    "ciudad": "Rio de Janeiro",
+    "estado": "RJ",  
+    "lat": -22.9936401,
+    "lon": -43.2384023
+  },
+  {
+    "name": "Hackerspace IFUSP",
+    "ciudad": "São Paulo",
+    "estado": "SP",
+    "lat": -23.56089,
+    "lon": -46.734207
+  },
+  {
+    "name": "Hackerspace Maringá",
+    "ciudad": "Maringá",
+    "estado": "PR",
+    "lat": -23.419017,
+    "lon": -51.925544
+  },
+  {
+    "name": "HackoonSpace",
+    "ciudad": "Sorocaba",
+    "estado": "SP",
+    "lat": -23.5816408,
+    "lon": -47.5251106
+  },
+  {
+    "name": "IdeaLab",
+    "ciudad": "Farroupilha",
+    "estado": "RS",
+    "lat": -29.22647,
+    "lon": -51.3468188
+  },
+  {
+    "name": "iFabLab Ambiente de Inovação - IFMG campus Ouro Preto",
+    "ciudad": "Ouro Preto",
+    "estado": "MG",
+    "lat": -20.385527,
+    "lon": -43.5035214
+  },
+  {
+    "name": "INSTITUTO CRIAR",
+    "ciudad": "São Paulo",
+    "estado": "SP",
+    "lat": -23.5270880,
+    "lon": -46.6462263
+  },
+  {
+    "name": "INSTITUTO VOLUSIANO",
+    "ciudad": "São Paulo",
+    "estado": "SP",
+    "lat": -23.537704,
+    "lon": -46.6993216
+  },
+  {
+    "name": "INTELLECTX TECNOLOGIA",
+    "ciudad": "Balneário Camboriú",
+    "estado": "SC",
+    "lat": -26.9924395,
+    "lon": -48.6339782
+  },
+  {
+    "name": "JARDIM DIGITAL",
+    "ciudad": "Rio de Janeiro",
+    "estado": "RJ",
+    "lat": -22.982427,
+    "lon": -43.214714
+  },
+  {
+    "name": "Lab Maker Living Lab",
+    "ciudad": "Campo Grande",
+    "estado": "MS",
+    "lat": -20.4532042,
+    "lon": -54.6051084
+  },
+      {
+    "name": "LabHacker Cámara de los Diputados",
+    "ciudad": "Brasília",
+    "estado": "DF",
+    "lat": -15.8027201,
+    "lon": -47.8651494
+  },
+  {
+    "name": "Laboratório Aberto SENAI FIEMG",
+    "ciudad": "Belo Horizonte",
+    "estado": "MG",
+    "lat": -19.9178980,
+    "lon": -43.9385249
+  },
+  {
+    "name": "Laboratório de Fabricação Digital (LFD)",
+    "ciudad": "Blumenau",
+    "estado": "SC",
+    "lat": -26.9195567,
+    "lon": -49.0658025
+  },
+  {
+    "name": "Laboratório Hacker de Campinas (LHC)",
+    "ciudad": "Campinas",
+    "estado": "SP",
+    "lat": -22.9178033,
+    "lon": -47.0524533
+  },
+  {
+    "name": "LIFE Laboratório de Inovação e Fabricação Digital da Escola de Engenharia",
+    "ciudad": "Porto Alegre",
+    "estado": "RS",
+    "lat": -30.0321406,
+    "lon": -51.2214529
+  },
+  {
+    "name": "Mackenzie",
+    "ciudad": "Campinas",
+    "estado": "SP",
+    "lat": -22.8849222,
+    "lon": -47.0681370
+  },
+  {
+    "name": "MAPAS CULTURAIS",
+    "ciudad": "São Paulo",
+    "estado": "SP",
+    "lat": -23.5346632,
+    "lon": -46.6395712
+  },
+  {
+    "name": "Maria Felipa LAB",
+    "ciudad": "Salvador",
+    "estado": "BA",
+    "lat": -12.9898062,
+    "lon": -38.5160698
+  },
+  {
+    "name": "Marialab",
+    "ciudad": "São Paulo",
+    "estado": "SP",
+    "lat": -23.5601195,
+    "lon": -46.6440623
+  },
+  {
+    "name": "MateHackers",
+    "ciudad": "Porto Alegre",
+    "estado": "RS",
+    "lat": -30.0198193,
+    "lon": -51.2091497
+  },
+  {
+    "name": "MIDIA NINJA",
+    "ciudad": "São Paulo",
+    "estado": "SP",
+    "lat": -23.6841365,
+    "lon": -46.7579125
+  },
+  {
+    "name": "O SOM DAS COMUNIDADES",
+    "ciudad": "Rio de Janeiro",
+    "estado": "RJ",  
+    "lat": -22.9240487,
+    "lon": -43.2130999
+  },
+  {
+    "name": "OLABI",
+    "ciudad": "Rio de Janeiro",
+    "estado": "RJ",
+    "lat": -22.853627,
+    "lon": -43.3831799
+  },
+  {
+    "name": "Padlab",
+    "ciudad": "Fortaleza",
+    "estado": "CE",
+    "lat": -3.7476065,
+    "lon": -38.5729941
+  },
+  {
+    "name": "PE²/ Plasma",
+    "ciudad": "Campinas",
+    "estado": "SP",
+    "lat": -22.8181875,
+    "lon": -47.0642433
+  },
+  {
+    "name": "POALAB",
+    "ciudad": "Porto Alegre",
+    "estado": "RS", 
+    "lat": -30.0262228,
+    "lon": -51.2211554
+  },
+  {
+    "name": "PONTO DE CULTURA FAZENDO A DIFERENÇA EM PAQUETÁ",
+    "ciudad": "Rio de Janeiro",
+    "estado": "RJ",
+    "lat": -22.7552826,
+    "lon": -43.1098336
+  },
+  {
+    "name": "PROGRAMA VOCACIONAL",
+    "ciudad": "São Paulo",
+    "estado": "SP",
+    "lat": -23.5465389,
+    "lon": -46.6362880
+  },
+  {
+    "name": "PROJETO ROBÔ DA ALEGRIA",
+    "ciudad": "Santos",
+    "estado": "SP",
+    "lat": -23.9335988,
+    "lon": -46.3286399
+  },
+  {
+    "name": "PRONTO3D",
+    "ciudad": "Florianópolis",
+    "estado": "SC",
+    "lat": -27.5973002,
+    "lon": -48.5496098
+  },
+  {
+    "name": "Pronto3D Unochapecó",
+    "ciudad": "Chapecó",
+    "estado": "SC",
+    "lat": -27.0945069,
+    "lon": -52.6594893
+  },
+  {
+    "name": "Quitanda FabLab",
+    "ciudad": "Barreiras",
+    "estado": "BA",
+    "lat": -13.0050446,
+    "lon": -41.3731812
+  },
+  {
+    "name": "Raul Hacker Club",
+    "ciudad": "Salvador",
+    "estado": "BA",
+    "lat": -13.0108623,
+    "lon": -38.4855969
+  },
+  {
+    "name": "Rio Maker Space",
+    "ciudad": "Rio de Janeiro",
+    "estado": "RJ",
+    "lat": -22.8985943,
+    "lon": -43.1780484
+  },
+  {
+    "name": "SENAI LAB CETEC",
+    "ciudad": "Palmas",
+    "estado": "TO",
+    "lat": -10.1764546,
+    "lon": -48.3361583
+  },
+  {
+    "name": "SEPETIBA QUE ME ENCANTA",
+    "ciudad": "Rio de Janeiro",
+    "estado": "RJ",
+    "lat": -22.9743091,
+    "lon":  -43.6809845
+  },
+  {
+    "name": "Santos Hacker Clube (SHC)",
+    "ciudad": "Santos",
+    "estado": "SP",
+    "lat": -23.9522484,
+    "lon": -46.3256882
+  },
+  {
+    "name": "Smart Mall",
+    "ciudad": "Sorocaba",
+    "estado": "SP",
+    "lat": -23.4962325,
+    "lon": -47.4589714
+  },
+  {
+    "name": "SOCIAL GOOD BRASIL",
+    "ciudad": "São Paulo",
+    "estado": "SP",
+    "lat": -23.6717693,
+    "lon": -46.5105652
+  },
+  {
+    "name": "Sucuri Hacker Club",
+    "ciudad": "Campo Grande",
+    "estado": "MS",
+    "lat": -20.4532444,
+    "lon": -54.6050253
+  },
+  {
+    "name": "Tarrafa Hacker Clube",
+    "ciudad": "Florianópolis",
+    "estado": "SC",
+    "lat": -27.6022367,
+    "lon": -48.5182861
+  },
+  {
+    "name": "TECNOPUC FabLab FreeZone",
+    "ciudad": "Porto Alegre",
+    "estado": "RS",
+    "lat": -30.0594971,
+    "lon": -51.1717268
+  },
+      {
+    "name": "Thomas Maker",
+    "ciudad": "Brasilia",
+    "estado": "DF",
+    "lat": -15.7684689,
+    "lon": -47.8741576
+  },
+  {
+    "name": "Tiradentes Fab Lab",
+    "ciudad": "Aracaju",
+    "estado": "SE",
+    "lat": -10.9162061,
+    "lon": -37.0774655
+  },
+  {
+    "name": "UNIP Fab Lab",
+    "ciudad": "São Paulo",
+    "estado": "SP",
+    "lat": -23.6050188,
+    "lon": -46.6489845
+  },
+  {
+    "name": "Usina Fab Lab",
+    "ciudad": "Porto Alegre",
+    "estado": "RS",
+    "lat": -30.0319450,
+    "lon": -51.2026625
+  },
+  {
+    "name": "VIRAÇÃO",
+    "ciudad": "São Paulo",
+    "estado": "SP",
+    "lat": -23.547955,
+    "lon": -46.63494
+  },
+  {
+    "name": "WIFI LIVRE SP",
+    "ciudad": "São Paulo",
+    "estado": "SP",
+    "lat": -23.5506507,
+    "lon": -46.6333824
+  }
+]

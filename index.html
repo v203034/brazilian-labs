@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BR Citizen Labs — Map</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="header.css">
+    <script src="header.js" defer></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', 'Lucida Console', Monaco, Monospace;
+            background-color: #373b57;
+        }
+
+        /* Ensure map container has proper height on all devices */
+        #visual-container {
+            min-height: 400px;
+        }
+
+        @media (min-width: 768px) {
+            #visual-container {
+                min-height: 660px;
+            }
+        }
+    </style>
+</head>
+
+<body class="geolocation" data-page="geolocation">
+
+<div id="main-content">
+    <div id="filter-menu">
+        <h4>Labs by Location</h4>
+
+        <label for="estado-filter">State:</label>
+        <select id="estado-filter">
+            <option value="">All</option>
+        </select>
+
+        <label for="ciudad-filter">City:</label>
+        <select id="ciudad-filter">
+            <option value="">All</option>
+        </select>
+
+        <label for="name-filter">Name:</label>
+        <input type="text" id="name-filter" placeholder="Search...">
+
+        <button id="clear-filters">
+            Clear all filters
+        </button>
+
+        <div id="lab-count">
+            0 labs found
+        </div>
+
+        <h4>Filtered Labs:</h4>
+        <ul id="lab-list"></ul>
+    </div>
+
+    <div id="visual-container"></div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+let map;
+let markers = [];
+let data = [];
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    map = L.map("visual-container").setView([-14.2350, -51.9253], 4);
+
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution: "© OpenStreetMap"
+    }).addTo(map);
+
+    setTimeout(() => {
+        map.invalidateSize();
+    }, 500);
+
+    fetch("geocoded_iniciativas.json")
+        .then(r => r.json())
+        .then(json => {
+            data = json;
+            populateStateFilter();
+            populateCityFilter();
+            updateMarkers();
+        });
+
+    document.getElementById("estado-filter").addEventListener("change", () => {
+        document.getElementById("ciudad-filter").value = "";
+        populateCityFilter();
+        updateMarkers();
+    });
+
+    document.getElementById("ciudad-filter").addEventListener("change", updateMarkers);
+    document.getElementById("name-filter").addEventListener("input", updateMarkers);
+
+    document.getElementById("clear-filters").addEventListener("click", () => {
+        document.getElementById("estado-filter").value = "";
+        document.getElementById("ciudad-filter").value = "";
+        document.getElementById("name-filter").value = "";
+        populateCityFilter();
+        updateMarkers();
+    });
+});
+
+function populateStateFilter() {
+    const estadoSelect = document.getElementById("estado-filter");
+    const estados = [...new Set(data.map(d => d.estado))].sort();
+
+    estados.forEach(e => {
+        const opt = document.createElement("option");
+        opt.value = e;
+        opt.textContent = e;
+        estadoSelect.appendChild(opt);
+    });
+}
+
+function populateCityFilter() {
+    const estadoVal = document.getElementById("estado-filter").value;
+    const ciudadSelect = document.getElementById("ciudad-filter");
+
+    ciudadSelect.innerHTML = '<option value="">All</option>';
+
+    const cities = data
+        .filter(d => !estadoVal || d.estado === estadoVal)
+        .map(d => d.ciudad);
+
+    [...new Set(cities)].sort().forEach(c => {
+        const opt = document.createElement("option");
+        opt.value = c;
+        opt.textContent = c;
+        ciudadSelect.appendChild(opt);
+    });
+}
+
+function updateMarkers() {
+    markers.forEach(m => map.removeLayer(m));
+    markers = [];
+
+    const estadoVal = document.getElementById("estado-filter").value.toLowerCase();
+    const ciudadVal = document.getElementById("ciudad-filter").value.toLowerCase();
+    const nameVal = document.getElementById("name-filter").value.toLowerCase();
+
+    const filtered = data.filter(d =>
+        (!estadoVal || d.estado.toLowerCase() === estadoVal) &&
+        (!ciudadVal || d.ciudad.toLowerCase() === ciudadVal) &&
+        (!nameVal || d.name.toLowerCase().includes(nameVal))
+    );
+
+    const labList = document.getElementById("lab-list");
+    labList.innerHTML = "";
+
+    filtered.forEach(d => {
+        const marker = L.marker([d.lat, d.lon]).addTo(map);
+        marker.bindPopup(`<b>${d.name}</b><br>${d.ciudad}, ${d.estado}`);
+        markers.push(marker);
+
+        const li = document.createElement("li");
+        li.textContent = d.name;
+        li.style.cursor = "pointer";
+        li.onclick = () => {
+            map.setView([d.lat, d.lon], 14);
+            marker.openPopup();
+        };
+        labList.appendChild(li);
+    });
+
+    document.getElementById("lab-count").textContent =
+        `${filtered.length} lab${filtered.length !== 1 ? "s" : ""} found`;
+
+    if (markers.length) {
+        const group = L.featureGroup(markers);
+        map.fitBounds(group.getBounds().pad(0.2));
+    }
+}
+</script>
+
+</body>
+</html>
