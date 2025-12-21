@@ -287,8 +287,9 @@ header h2 {
     flex: 1;
 }
 
-/* Ecosystem: Allow natural height for full diagram display */
-body[data-page="ecosystem"] #visual-container {
+/* Ecosystem & Networks: Allow natural height for full display */
+body[data-page="ecosystem"] #visual-container,
+body[data-page="networks"] #visual-container {
     height: auto;
     min-height: 400px;
     overflow: visible;
@@ -314,6 +315,13 @@ body[data-page="ecosystem"] #visual-container {
     
     /* Ecosystem: Remove fixed height on desktop too */
     body[data-page="ecosystem"] #visual-container {
+        height: auto;
+        min-height: 600px;
+        overflow: visible;
+    }
+    
+    /* Networks: Remove fixed height to show full pie chart */
+    body[data-page="networks"] #visual-container {
         height: auto;
         min-height: 600px;
         overflow: visible;
