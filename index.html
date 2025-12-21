@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BR Citizen Labs — Map</title>
 
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    />
-
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="header.css">
     <script src="header.js" defer></script>
 
@@ -20,59 +16,14 @@
             font-family: 'Courier New', 'Lucida Console', Monaco, Monospace;
             background-color: #373b57;
         }
-
-        #map-wrapper {
-            display: flex;
-            flex-direction: column;
-            margin: 0 20px 30px 20px;
-            gap: 15px;
-        }
-
-        #filter-menu {
-            background-color: rgba(0,0,0,0.4);
-            color: white;
-            padding: 15px;
-            border-radius: 15px;
-            font-size: 0.9rem;
-            width: 100%;
-            box-sizing: border-box;
-            flex-shrink: 0;
-        }
-
-        #filter-menu select,
-        #filter-menu input {
-            width: 100%;
-            margin-bottom: 10px;
-        }
-
-        #map-container {
-            height: 400px;
-            width: 100%;
-            border-radius: 15px;
-            overflow: hidden;
-        }
-
-        @media (min-width: 768px) {
-            #map-wrapper {
-                flex-direction: row;
-            }
-
-            #filter-menu {
-                width: 200px;
-            }
-
-            #map-container {
-                height: 600px;
-            }
-        }
     </style>
 </head>
 
 <body class="geolocation" data-page="geolocation">
 
-<div id="map-wrapper">
+<div id="main-content">
     <div id="filter-menu">
-        <h4 style="margin-top:0;">Labs by Location</h4>
+        <h4>Labs by Location</h4>
 
         <label for="estado-filter">State:</label>
         <select id="estado-filter">
@@ -87,22 +38,19 @@
         <label for="name-filter">Name:</label>
         <input type="text" id="name-filter" placeholder="Search...">
 
-        <button id="clear-filters" style="width:100%; margin-bottom:10px;">
+        <button id="clear-filters">
             Clear all filters
         </button>
 
-        <div id="lab-count" style="margin-bottom:10px; font-weight:bold;">
+        <div id="lab-count">
             0 labs found
         </div>
 
         <h4>Filtered Labs:</h4>
-        <ul
-          id="lab-list"
-          style="list-style:none; padding-left:0; max-height:200px; overflow-y:auto;"
-        ></ul>
+        <ul id="lab-list"></ul>
     </div>
 
-    <div id="map-container"></div>
+    <div id="visual-container"></div>
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -114,7 +62,7 @@ let data = [];
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    map = L.map("map-container").setView([-14.2350, -51.9253], 4);
+    map = L.map("visual-container").setView([-14.2350, -51.9253], 4);
 
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19,
