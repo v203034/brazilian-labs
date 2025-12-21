@@ -17,33 +17,29 @@ body {
     background-color: #F4AFAA;
 }
 
-/* Networks-specific: Reverse the order - chart left, filter right */
 #main-content {
+    display: flex;
     flex-direction: row-reverse;
+    min-height: 100vh;
 }
 
-/* Networks-specific: Pie chart container styling */
+/* 1. CONTAINER FIX: Added background and allowed it to expand */
 #visual-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 40px 20px 20px 20px;
+    padding: 40px 20px;
     gap: 20px;
+    background-color: rgba(0, 0, 0, 0.3); /* Dark transparent background */
+    border-radius: 0 0 0 20px; /* Optional: matches ecosystem style */
 }
 
-/* Make container fill available space on desktop */
 @media (min-width: 768px) {
     #visual-container {
         flex: 1;
-        min-height: 600px;
-    }
-}
-
-/* On mobile, let it size naturally */
-@media (max-width: 767px) {
-    #visual-container {
-        min-height: auto;
+        min-height: auto; /* Changed from 600px to auto so it expands */
+        padding-bottom: 80px; 
     }
 }
 
@@ -68,17 +64,12 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Pie wrapper - maintains aspect ratio */
+/* 2. WRAPPER FIX: Controlled max-width to prevent vertical spill */
 #pieChart-wrapper {
     width: 100%;
-    max-width: 650px;
+    max-width: 500px; 
     position: relative;
-}
-
-@media (min-width: 768px) {
-    #pieChart-wrapper {
-        max-width: 550px;
-    }
+    flex-shrink: 0;
 }
 
 #pieChart-wrapper::before {
@@ -95,9 +86,28 @@ body {
 #pieChart svg {
     width: 100%;
     height: 100%;
+    overflow: visible; /* Ensures slices don't clip */
 }
 
-/* Filter menu additions for this page */
+/* 3. TRANSPARENT LOOK: Replicating Ecosystem diagram style */
+#pieChart path {
+    cursor: pointer;
+    fill-opacity: 0.6;   /* Transparency */
+    stroke: white;        /* White borders */
+    stroke-width: 2px;
+    transition: fill-opacity 0.2s, stroke-width 0.2s;
+}
+
+#pieChart path:hover {
+    fill-opacity: 1 !important;
+}
+
+.active-slice {
+    fill-opacity: 1 !important;
+    stroke-width: 3px !important;
+}
+
+/* Filter menu styles */
 .filter-instruction {
     font-size: 0.85rem;
     color: rgba(255, 255, 255, 0.7);
@@ -118,10 +128,6 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.affiliation-item:last-child {
-    border-bottom: none;
-}
-
 .affiliation-item strong {
     display: block;
     margin-bottom: 6px;
@@ -138,29 +144,10 @@ body {
     color: white;
 }
 
-/* Mobile adjustments */
 @media (max-width: 767px) {
-    #main-content {
-        flex-direction: column !important;
-        align-items: center;
-    }
-    
-    #visual-container {
-        padding: 15px 10px;
-    }
-    
-    #pieChart-wrapper {
-        max-width: 400px;
-    }
-    
-    #filter-menu {
-        width: 100%;
-        max-width: 100%;
-    }
-    
-    #filter-menu #affiliation-list {
-        max-height: 300px;
-    }
+    #main-content { flex-direction: column !important; }
+    #visual-container { padding: 15px 10px; border-radius: 0; }
+    #pieChart-wrapper { max-width: 350px; }
 }
 </style>
 </head>
@@ -168,15 +155,11 @@ body {
 <body data-page="networks">
 
 <div id="main-content">
-
     <div id="filter-menu">
         <h4>Labs by Network</h4>
         <p class="filter-instruction">Select a slice to filter the labs by network.</p>
-        
         <button id="clear-filters">Clear all filters</button>
-        
         <div id="lab-count">0 labs found</div>
-        
         <h4>Filtered Labs:</h4>
         <ul id="affiliation-list"></ul>
     </div>
@@ -188,7 +171,6 @@ body {
             <div id="pieChart"></div>
         </div>
     </div>
-
 </div>
 
 <script>
@@ -218,9 +200,10 @@ d3.json("labsData.json").then(function(rawData) {
         .domain(affiliations)
         .range(affiliations.map((d,i) => d3.interpolateRainbow(i / affiliations.length)));
 
+    // 4. VIEWBOX FIX: Increased to 600x600 to prevent edge clipping
     const svg = d3.select("#pieChart")
         .append("svg")
-        .attr("viewBox","-250 -250 500 500")
+        .attr("viewBox","-300 -300 600 600")
         .attr("preserveAspectRatio","xMidYMid meet");
 
     const g = svg.append("g");
@@ -257,18 +240,23 @@ d3.json("labsData.json").then(function(rawData) {
                   .text(`- ${l.lab}`);
             });
         });
-
         document.getElementById("lab-count").textContent = `${labs.length} lab${labs.length !== 1 ? 's' : ''} found`;
     }
 
     renderList(allLabs);
 
+    // 5. SELECTION LOGIC: Handles the 'active-slice' opacity
     function rotateToSlice(d, el){
         const midAngle = (d.startAngle + d.endAngle)/2;
         g.transition().duration(800).attr("transform",`rotate(${-midAngle*180/Math.PI})`);
-        if(prevSlice) d3.select(prevSlice).attr("d",arc);
+        
+        if(prevSlice) {
+            d3.select(prevSlice).attr("d",arc).classed("active-slice", false);
+        }
+        
         prevSlice = el;
-        d3.select(el).attr("d",arcOver);
+        d3.select(el).attr("d",arcOver).classed("active-slice", true);
+        
         networkTag.style("display", "block")
                   .style("background", colorScale(d.data.affiliation))
                   .text(d.data.affiliation);
@@ -281,12 +269,13 @@ d3.json("labsData.json").then(function(rawData) {
         .append("path")
         .attr("d", arc)
         .attr("fill", d => colorScale(d.data.affiliation))
-        .style("cursor","pointer")
         .on("click", function(e,d){ rotateToSlice(d,this); });
 
     document.getElementById("clear-filters").onclick = () => {
         g.transition().attr("transform","rotate(0)");
-        if(prevSlice) d3.select(prevSlice).attr("d",arc);
+        if(prevSlice) {
+            d3.select(prevSlice).attr("d",arc).classed("active-slice", false);
+        }
         prevSlice=null;
         networkTag.style("display","none");
         renderList(allLabs);
