@@ -54,10 +54,9 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* BIG CHART WRAPPER */
 #pieChart-wrapper {
     width: 100%;
-    max-width: 650px; /* Restored to big size */
+    max-width: 650px;
     position: relative;
 }
 
@@ -77,11 +76,10 @@ body {
     height: 100%;
 }
 
-/* TRANSPARENT LOOK STYLING */
 #pieChart path {
     cursor: pointer;
-    fill-opacity: 0.6;   /* Semi-transparent look */
-    stroke: white;        /* White borders */
+    fill-opacity: 0.6;
+    stroke: white;
     stroke-width: 2px;
     transition: fill-opacity 0.2s, stroke-width 0.2s;
 }
@@ -90,13 +88,11 @@ body {
     fill-opacity: 1 !important;
 }
 
-/* Class applied to the selected slice */
 .active-slice {
     fill-opacity: 1 !important;
     stroke-width: 3px !important;
 }
 
-/* Filter menu items */
 .affiliation-item {
     margin-bottom: 12px;
     padding-bottom: 8px;
