@@ -12,7 +12,6 @@
 <script src="header.js" defer></script>
 
 <style>
-
 body {
     margin: 0;
     padding: 0;
@@ -20,89 +19,19 @@ body {
     background-color: #808000;
 }
 
-#main-content {
-    margin: 0 20px 30px 20px;
-    padding: 0;
+/* Venn-specific: center the diagram and add key below */
+#visual-container {
     display: flex;
     flex-direction: column;
-    gap: 15px;
     align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
-#filter-menu, #venn-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-#filter-menu {
-    background-color: rgba(0,0,0,0.4);
-    color: white;
-    padding: 15px;
-    border-radius: 15px;
-    font-size: 0.9rem;
-    width: 100%;
-    box-sizing: border-box;
-    flex: 0 0 280px;
-}
-
-#filter-menu h4 {
-    margin-top: 0;
-}
-
-.filter-instruction {
-    font-size: 0.8rem;
-    color: grey;
-    margin: 4px 0;
-}
-
-#lab-list { 
-    max-height: 150px; 
-    overflow-y: auto; 
-    padding-left: 0; 
-    list-style: none; 
-    font-size: 0.85rem; 
-}
-
-#color-key-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
-    gap: 6px;
-    margin-top: 6px;
-}
-
-#color-key-wrapper strong {
-    color: white;
-    font-size: 1rem;       
-}
-
-#color-key-container span {
-    padding: 2px 6px;
-    border-radius: 3px;
-    color: #fff;
-    font-size: 0.85rem; 
-}
-
-#tags-container {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    font-size: 0.85rem; 
-}
-
-#venn-section {
-    background-color: rgba(0,0,0,0.4);
-    border-radius: 15px;
-    padding: 10px;
-    width: 100%;
-    flex: 1;
-    align-items: center;
-}
-
-#venn-section h3 { 
+#visual-container h3 { 
     text-align: center; 
-    color: white; 
+    color: white;
+    margin: 0 0 10px 0;
 }
 
 #venn-diagram-svg-wrapper {
@@ -110,7 +39,8 @@ body {
     justify-content: center; 
     align-items: center;   
     flex: 1;
-    min-height: 500px;
+    min-height: 400px;
+    width: 100%;
 }
 
 #venn-diagram-svg-wrapper svg { 
@@ -119,14 +49,71 @@ body {
     height: auto; 
 }
 
+#color-key-wrapper {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+#color-key-wrapper strong {
+    color: white;
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 8px;
+}
+
+#color-key-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 6px;
+}
+
+#color-key-container span {
+    padding: 4px 8px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 0.85rem;
+}
+
+/* Filter menu additions for this page */
+.filter-instruction {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 8px 0;
+    line-height: 1.3;
+}
+
+#filter-menu #lab-list {
+    max-height: 400px;
+}
+
+#filter-menu #lab-list li {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+#filter-menu #lab-list li span:first-child {
+    width: 12px;
+    height: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+/* Venn diagram styling */
 .venn-area path {
     cursor: pointer;
     fill-opacity: 0.5;
     stroke: white;
     stroke-width: 2px;
+    transition: fill-opacity 0.2s;
 }
 
-.venn-area path:hover { fill-opacity: 1 !important; }
+.venn-area path:hover { 
+    fill-opacity: 1 !important; 
+}
 
 .venn-area text {
     font-family: Verdana, sans-serif;
@@ -141,22 +128,28 @@ body {
     stroke-width: 3px;
 }
 
-@media(min-width: 768px){
-    #main-content { 
-        flex-direction: row; 
-        align-items: stretch; 
-        gap: 20px; 
+@media (min-width: 768px) {
+    #venn-diagram-svg-wrapper { 
+        min-height: 500px; 
     }
-    #venn-section { 
-        width: 100%; 
-        align-items: center; 
+    
+    #filter-menu #lab-list {
+        max-height: 500px;
     }
-    #lab-list { max-height: 500px; }
 }
 
-@media(max-width: 767px){
-    #venn-diagram-svg-wrapper { min-height: 250px; }
-    #venn-section { padding: 10px; }
+@media (max-width: 767px) {
+    #venn-diagram-svg-wrapper { 
+        min-height: 250px; 
+    }
+    
+    #visual-container {
+        padding: 10px;
+    }
+    
+    #filter-menu #lab-list {
+        max-height: 300px;
+    }
 }
 </style>
 </head>
@@ -168,14 +161,16 @@ body {
    <div id="filter-menu">
       <h4>Labs by Tag</h4>
       <p class="filter-instruction">Click on the diagram to filter labs by tag.</p>
+      
       <button id="clear-filters">Clear all filters</button>
-      <div id="lab-count" style="margin:10px 0;font-weight:bold;">0 labs found</div>
-      <div id="tags-container">
-          <ul id="lab-list"></ul>
-      </div>
+      
+      <div id="lab-count">0 labs found</div>
+      
+      <h4>Filtered Labs:</h4>
+      <ul id="lab-list"></ul>
    </div>
 
-   <div id="venn-section">
+   <div id="visual-container">
       <h3>Labs by Category</h3>
       <div id="venn-diagram-svg-wrapper"></div>
       <div id="color-key-wrapper">
@@ -284,17 +279,15 @@ function filterAndDisplayLabs(){
 
     const list = d3.select("#lab-list").html('');
     filteredLabs.forEach(lab => {
-        const li = list.append('li').style('display','flex').style('align-items','center').style('gap','6px');
-        lab.categories.forEach(c => li.append('span')
-            .style('width','12px')
-            .style('height','12px')
-            .style('background',categoryColors[c]||'#000')
-            .style('border','1px solid #333')
-            .style('border-radius','3px'));
+        const li = list.append('li');
+        lab.categories.forEach(c => {
+            li.append('span')
+              .style('background', categoryColors[c] || '#000');
+        });
         li.append('span').text(lab.lab_name);
     });
 
-    d3.select("#lab-count").text(`${filteredLabs.length} labs found`);
+    d3.select("#lab-count").text(`${filteredLabs.length} lab${filteredLabs.length !== 1 ? 's' : ''} found`);
 }
 
 d3.selectAll('.venn-area').on('click',(e,d)=>{
