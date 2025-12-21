@@ -20,10 +20,8 @@ body {
 #main-content {
     display: flex;
     flex-direction: row-reverse;
-    min-height: 100vh;
 }
 
-/* 1. CONTAINER FIX: Added background and allowed it to expand */
 #visual-container {
     display: flex;
     flex-direction: column;
@@ -31,16 +29,8 @@ body {
     justify-content: flex-start;
     padding: 40px 20px;
     gap: 20px;
-    background-color: rgba(0, 0, 0, 0.3); /* Dark transparent background */
-    border-radius: 0 0 0 20px; /* Optional: matches ecosystem style */
-}
-
-@media (min-width: 768px) {
-    #visual-container {
-        flex: 1;
-        min-height: auto; /* Changed from 600px to auto so it expands */
-        padding-bottom: 80px; 
-    }
+    background-color: rgba(0, 0, 0, 0.3);
+    flex: 1;
 }
 
 #visual-container h3 {
@@ -64,12 +54,11 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* 2. WRAPPER FIX: Controlled max-width to prevent vertical spill */
+/* BIG CHART WRAPPER */
 #pieChart-wrapper {
     width: 100%;
-    max-width: 500px; 
+    max-width: 650px; /* Restored to big size */
     position: relative;
-    flex-shrink: 0;
 }
 
 #pieChart-wrapper::before {
@@ -86,13 +75,12 @@ body {
 #pieChart svg {
     width: 100%;
     height: 100%;
-    overflow: visible; /* Ensures slices don't clip */
 }
 
-/* 3. TRANSPARENT LOOK: Replicating Ecosystem diagram style */
+/* TRANSPARENT LOOK STYLING */
 #pieChart path {
     cursor: pointer;
-    fill-opacity: 0.6;   /* Transparency */
+    fill-opacity: 0.6;   /* Semi-transparent look */
     stroke: white;        /* White borders */
     stroke-width: 2px;
     transition: fill-opacity 0.2s, stroke-width 0.2s;
@@ -102,37 +90,17 @@ body {
     fill-opacity: 1 !important;
 }
 
+/* Class applied to the selected slice */
 .active-slice {
     fill-opacity: 1 !important;
     stroke-width: 3px !important;
 }
 
-/* Filter menu styles */
-.filter-instruction {
-    font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.7);
-    margin: 8px 0;
-    line-height: 1.3;
-}
-
-#filter-menu #affiliation-list {
-    flex: 1;
-    min-height: 0;
-    overflow-y: auto;
-    max-height: 600px;
-}
-
+/* Filter menu items */
 .affiliation-item {
     margin-bottom: 12px;
     padding-bottom: 8px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.affiliation-item strong {
-    display: block;
-    margin-bottom: 6px;
-    color: white;
-    font-size: 0.9rem;
 }
 
 .affiliation-lab {
@@ -146,8 +114,7 @@ body {
 
 @media (max-width: 767px) {
     #main-content { flex-direction: column !important; }
-    #visual-container { padding: 15px 10px; border-radius: 0; }
-    #pieChart-wrapper { max-width: 350px; }
+    #pieChart-wrapper { max-width: 400px; }
 }
 </style>
 </head>
@@ -200,10 +167,9 @@ d3.json("labsData.json").then(function(rawData) {
         .domain(affiliations)
         .range(affiliations.map((d,i) => d3.interpolateRainbow(i / affiliations.length)));
 
-    // 4. VIEWBOX FIX: Increased to 600x600 to prevent edge clipping
     const svg = d3.select("#pieChart")
         .append("svg")
-        .attr("viewBox","-300 -300 600 600")
+        .attr("viewBox","-300 -300 600 600") 
         .attr("preserveAspectRatio","xMidYMid meet");
 
     const g = svg.append("g");
@@ -232,7 +198,7 @@ d3.json("labsData.json").then(function(rawData) {
         const ul = d3.select("#affiliation-list").html("");
         Object.entries(map).forEach(([n,ls])=>{
             const li = ul.append("li").attr("class","affiliation-item");
-            li.append("strong").text(n);
+            li.append("strong").text(n).style("color","white");
             ls.forEach(l=>{
                 li.append("div")
                   .attr("class","affiliation-lab")
@@ -245,15 +211,16 @@ d3.json("labsData.json").then(function(rawData) {
 
     renderList(allLabs);
 
-    // 5. SELECTION LOGIC: Handles the 'active-slice' opacity
     function rotateToSlice(d, el){
         const midAngle = (d.startAngle + d.endAngle)/2;
         g.transition().duration(800).attr("transform",`rotate(${-midAngle*180/Math.PI})`);
         
+        // Reset old slice transparency
         if(prevSlice) {
             d3.select(prevSlice).attr("d",arc).classed("active-slice", false);
         }
         
+        // Set new slice to solid
         prevSlice = el;
         d3.select(el).attr("d",arcOver).classed("active-slice", true);
         
